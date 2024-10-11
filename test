@@ -1,0 +1,26 @@
+secrest_number = 7
+guess = ""
+guess_limit = 5
+guess_count = 0
+out_of_guesses = False
+hint = "An odd number within the range of (1-10) "
+
+
+while guess != secrest_number and not(out_of_guesses):
+    if guess_count < guess_limit:
+        guess = int(input("Enter your guess: "))
+        if guess < secrest_number:
+            print("Too low, Here's a hint " + hint)
+        if guess > secrest_number:
+            print("Too high, Here's a hint " + hint)
+            
+        guess_count += 1
+        
+    
+    else:
+        out_of_guesses = True
+
+if out_of_guesses:
+    print("YOU LOSE, DUMMY!")
+else:
+    print("YOU WIN, UNSTOPPABLE!")
